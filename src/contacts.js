@@ -7,8 +7,6 @@ var contacts = {};
 
 function load(file) {
     if (typeof file === "undefined") {
-        console.error('Arquivo de contatos não encontrado');
-
         return false;
     }
 
