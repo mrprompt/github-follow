@@ -10,5 +10,5 @@ $ npm install -g github-follow
 ### Uso
 
 ```
-$ github-follow contacts.json [--verbose]
+$ GITHUB_CLIENT=token github-follow contacts.json [--verbose]
 ``` 
