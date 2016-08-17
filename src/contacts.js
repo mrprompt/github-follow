@@ -39,7 +39,7 @@ function load(file) {
 
                 me.follow(username);
 
-                console.log(email + ' => @username');
+                console.log(email + ' => @' + username);
             }
         })
     });
