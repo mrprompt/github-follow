@@ -1,0 +1,7 @@
+--require should
+--reporter spec
+--ui bdd
+--growl
+--recursive
+--colors
+--timeout 15000

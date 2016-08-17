@@ -1,0 +1,49 @@
+{
+  "name": "github-follow",
+  "version": "1.0.0",
+  "description": "Search users from email list and follow on GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrprompt/github-follow.git"
+  },
+  "keywords": [
+    "cli-app",
+    "cli",
+    "github",
+    "user",
+    "username",
+    "email",
+    "follow",
+    "git"
+  ],
+  "author": {
+    "name": "Thiago Paes",
+    "email": "mrprompt@gmail.com",
+    "url": "mrprompt.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrprompt/github-follow/issues"
+  },
+  "homepage": "https://github.com/mrprompt/github-follow#readme",
+  "bin": {
+    "github-follow": "index.js"
+  },
+  "engines": {
+    "node": ">=6.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "should": "^11.1.0"
+  },
+  "dependencies": {
+    "github-username": "^3.0.0",
+    "minimist": "^1.2.0",
+    "octonode": "^0.7.6"
+  }
+}

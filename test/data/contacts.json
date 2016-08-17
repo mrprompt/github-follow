@@ -1,0 +1,40 @@
+{
+  "connections": [
+    {
+      "resourceName": "people/c0000000000000000",
+      "etag": "FxFxFxFx=",
+      "names": [
+        {
+          "metadata": {
+            "primary": true,
+            "source": {
+              "type": "CONTACT",
+              "id": "0101010101010101"
+            }
+          },
+          "displayName": "Foo Bar",
+          "familyName": "Bar",
+          "givenName": "Foo",
+          "middleName": "Bum",
+          "displayNameLastFirst": "Bum, Foo Bar"
+        }
+      ],
+      "emailAddresses": [
+        {
+          "metadata": {
+            "primary": true,
+            "source": {
+              "type": "CONTACT",
+              "id": "020202020202"
+            }
+          },
+          "value": "foo.bar@foo.bar.bar",
+          "type": "other",
+          "formattedType": "Other"
+        }
+      ]
+    }
+    ],
+  "nextPageToken": "X0X0X0X0X0X0",
+  "nextSyncToken": "X0X0X0X0X0X0X0X0X0"
+}
