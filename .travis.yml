@@ -3,10 +3,11 @@ language: node_js
 node_js:
   - "6"
 
-script:
-  - npm test
-  - npm run coverage
+script: npm run coverage
 
 addons:
     code_climate:
         repo_token: a14a4a715c07555f27f748317f7f2171afb6bd2b031c131b60a9e229772c6469
+
+after_script:
+  - codeclimate-test-reporter < ./coverage/lcov.info
