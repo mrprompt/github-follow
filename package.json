@@ -39,6 +39,7 @@
     "node": ">=6.2"
   },
   "devDependencies": {
+    "istanbul": "^0.4.4",
     "mocha": "^3.0.2",
     "should": "^11.1.0"
   },
