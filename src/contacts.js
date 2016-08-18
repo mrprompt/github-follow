@@ -38,6 +38,11 @@ function load(file) {
                     var username = data.items[0].login;
 
                     me.follow(username, function(err, result) {
+                        if (err) {
+                            console.error('ERROR: ' + err.body.message);
+                            return;
+                        }
+                        
                         console.log(email + ' => @' + username);
                     });
                 }

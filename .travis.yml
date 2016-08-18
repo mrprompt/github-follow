@@ -5,3 +5,7 @@ node_js:
 
 script:
   - npm test
+
+addons:
+    code_climate:
+        repo_token: a14a4a715c07555f27f748317f7f2171afb6bd2b031c131b60a9e229772c6469
