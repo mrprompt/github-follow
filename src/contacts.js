@@ -17,37 +17,35 @@ function load(file) {
     var search = githubClient.search();
 
     contactsList.connections.forEach(function(contact) {
-        setTimeout(function() {
-            if ("emailAddresses" in contact === false) {
+        if ("emailAddresses" in contact === false) {
+            return;
+        }
+
+        var email = contact.emailAddresses[0].value;
+
+        search.users({
+            q: `${email} in:email`,
+            sort: 'created',
+            order: 'asc'
+        }, function (err, data) {
+            if (err) {
+                console.error('ERROR: ' + err.body.message);
                 return;
             }
 
-            var email = contact.emailAddresses[0].value;
+            if (data.total_count > 0) {
+                var username = data.items[0].login;
 
-            search.users({
-                q: `${email} in:email`,
-                sort: 'created',
-                order: 'asc'
-            }, function (err, data) {
-                if (err) {
-                    console.error('ERROR: ' + err.body.message);
-                    return;
-                }
-
-                if (data.total_count > 0) {
-                    var username = data.items[0].login;
-
-                    me.follow(username, function(err, result) {
-                        if (err) {
-                            console.error('ERROR: ' + err.body.message);
-                            return;
-                        }
-                        
-                        console.log(email + ' => @' + username);
-                    });
-                }
-            })
-        }, 10000);
+                me.follow(username, function(err, result) {
+                    if (err) {
+                        console.error('ERROR: ' + err.body.message);
+                        return;
+                    }
+                    
+                    console.log(email + ' => @' + username);
+                });
+            }
+        })
     });
 }
 
